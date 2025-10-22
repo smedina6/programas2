@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoDatos - Conglomerados del Brigadista</title>
+  <link rel="stylesheet" href="../../css/brigada_conglomerado.css">
+</head>
+<body>
+  <main>
+    <h2>Conglomerados Asignados</h2>
+       <input type="text" id="filtro" placeholder="Filtrar por nombre..." class="filtro-input">
+    <table id="tabla-conglomerados">
+      <thead>
+        <tr><th>ID</th><th>Nombre</th><th>Ubicación</th></tr>
+
+      </thead>
+      <tbody>
+        <!-- Los datos se cargarán dinámicamente desde JS -->
+      </tbody>
+    </table>
+  </main>
+    <!-- Paginación -->
+    <div id="paginacion">
+      <button id="prev">Anterior</button>
+      <span id="pagina-actual">1</span>
+      <button id="next">Siguiente</button>
+    </div>
+  </main>
+  <script src="../../js/brigadista_conglomerados.js"></script>
+</body>
+</html>

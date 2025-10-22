@@ -1,0 +1,174 @@
+:root {
+  --verde-oscuro: #145a32;
+  --verde: #1f7a5b;
+  --verde-claro: #c8f1d4;
+  --acento: #00b37a;
+  --gris-suave: #f8fff9;
+  --texto: #2c3e50;
+}
+
+/* --- Fondo general y centrado --- */
+.form-page {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  min-height: 100vh;
+  background: none;
+  padding: auto;
+  animation: fadeInBackground 1s ease both;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Tarjeta principal --- */
+.card.wide {
+  max-width: 640px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(15, 73, 57, 0.15);
+  border: 1px solid #e2eee7;
+  overflow: hidden;
+   margin: auto;
+  animation: floatUp 0.6s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  padding: 0 32px;
+}
+
+
+.card.wide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 38px rgba(15, 73, 57, 0.25);
+}
+
+/* --- Encabezado elegante dentro de la tarjeta --- */
+.card__header {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1.8rem;
+  padding: 28px 32px 20px 32px;
+  background: linear-gradient(135deg, var(--verde-oscuro), var(--verde));
+  color: #ffffff;
+  border-radius: 24px 24px 0 0;
+  box-shadow: inset 0 -3px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+   width: calc(100% + 64px); 
+  margin-left: -32px;       
+  margin-right: -32px;     
+
+  position: relative;
+}
+
+.card__header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--acento);
+  opacity: 0.8;
+}
+
+.card__header h1 {
+  margin: auto;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.card__header .subtitle {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+/* --- Cuerpo del formulario --- */
+.card__body {
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* --- Etiquetas e inputs --- */
+label {
+  font-weight: 600;
+  color: var(--texto);
+  margin-bottom: 6px;
+  display: block;
+  
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #c9e2d5;
+  background: #f9fffb;
+  font-size: 15px;
+  color: var(--texto);
+  transition: all 0.25s ease;
+   margin-top: 12px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--acento);
+  box-shadow: 0 0 8px rgba(0, 179, 122, 0.3);
+  background: #ffffff;
+}
+
+/* --- Botón principal --- */
+button {
+  background: linear-gradient(135deg, var(--verde), var(--verde-oscuro));
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+   margin-top: 12px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #00b37a, var(--verde));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 179, 122, 0.3);
+}
+
+/* --- Animaciones suaves --- */
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- Adaptabilidad --- */
+@media (max-width: 480px) {
+  .card.wide {
+    border-radius: 18px;
+  }
+  .card__header h1 {
+    font-size: 22px;
+  }
+  input, select, textarea {
+    font-size: 14px;
+  }
+  button {
+    font-size: 15px;
+  }
+}

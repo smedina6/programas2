@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoDatos - Filtrar Conglomerados</title>
+  <link rel="stylesheet" href="../../css/filtrar_conglomerados.css">
+</head>
+<body>
+
+  <main>
+    <h2>Filtrar Conglomerados</h2>
+    <form id="filterForm">
+      <label>Vegetación:</label>
+      <input type="text" id="vegetacion" placeholder="Ej: Bosque"><br>
+      <label>Especie:</label>
+      <input type="text" id="especie" placeholder="Ej: Roble"><br>
+      <button type="submit">Filtrar</button>
+    </form>
+
+    <h3>Resultados</h3>
+    <table id="resultados">
+      <thead>
+        <tr><th>ID</th><th>Nombre</th><th>Ubicación</th><th>Especies</th><th>Vegetacion</th></tr>
+      </thead>
+      <tbody>
+        <!-- Los resultados se llenarán por JS -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="../../js/filtrar_conglomerados.js"></script>
+</body>
+</html>

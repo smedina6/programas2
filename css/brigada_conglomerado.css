@@ -1,0 +1,189 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: #2d3e2d;
+  background: none;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; 
+  text-align: center;
+  margin-top: -10px;
+}
+
+/* --- HEADER --- */
+header {
+  background: linear-gradient(90deg, #1f7a5b, #2e8b57);
+  color: white;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: relative; 
+}
+
+header h1 {
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.header-buttons button {
+  background: #145a32;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.header-buttons button:hover {
+  background: #0e4726;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+/* --- TABLA --- */
+table {
+  margin: 30px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 85%;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: 14px 18px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+th {
+  background: linear-gradient(90deg, #1f7a5b, #2e8b57);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background: #f0f9f3;
+}
+
+tr:hover {
+  background: #d9f2e6;
+  transform: scale(1.01);
+  transition: all 0.25s ease;
+}
+
+/* --- BOTONES DE TABLA --- */
+td button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+td .btn-guardar {
+  background: #34c38f;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+td .btn-guardar:hover {
+  background: #2db07f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+td .btn-eliminar {
+  background: #e74c3c;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+td .btn-eliminar:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* --- BOTÓN INFERIOR --- */
+.acciones {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.acciones button {
+  background: #1f7a5b;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.acciones button:hover {
+  background: #145a32;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* --- INPUT FILTRO --- */
+.filtro-input {
+  margin-bottom: 15px;
+  padding: 6px 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #c9e2d5;
+  font-size: 0.95rem;
+}
+
+/* --- PAGINACIÓN --- */
+#paginacion {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#paginacion button {
+  background: #1f7a5b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+#paginacion button:hover {
+  background: #145a32;
+  transform: translateY(-2px);
+}
+
+/* --- span pagina --- */
+#pagina-actual {
+  margin: 0 10px;
+  font-weight: 600;
+}

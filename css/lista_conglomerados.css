@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --verde-oscuro: #0e3b2e;
+  --verde: #1f7a5b;
+  --acento: #34c38f;
+  --gris: #f5f9f6;
+  --rojo: #e74c3c;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: none; /* sin fondo general */
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--verde), var(--verde-oscuro));
+  color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.header-buttons button {
+  margin-left: 10px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--acento), var(--verde-claro));
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.header-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, var(--verde-claro), var(--acento));
+}
+
+/* ===== MAIN ===== */
+main {
+  flex: 1;
+  padding: 1.5rem 2rem;
+}
+
+h2 {
+  color: var(--verde-oscuro);
+  margin-bottom: 1rem;
+}
+
+/* ===== TABLE PREMIUM ===== */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+  padding: 10px 14px;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+table th {
+  background: linear-gradient(135deg, var(--verde), var(--verde-oscuro));
+  color: #fff;
+  font-weight: 600;
+}
+
+table td {
+  background: #f5f9f6;
+  border-bottom: 1px solid #d0e6da;
+}
+
+table tr:hover td {
+  background: #e0f0e8;
+  transform: scale(1.02);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #cde3d8;
+}

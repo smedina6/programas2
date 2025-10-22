@@ -1,0 +1,130 @@
+:root {
+  --verde: #1f7a5b;
+  --verde-oscuro: #145a32;
+  --acento: #34c38f;
+  --rojo: #e74c3c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #2a3d34;
+  background: #f8faf9;
+}
+
+header {
+  background: var(--verde);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  color: var(--verde-oscuro);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+#buscar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cce5dd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.conglomerado {
+  border: 1px solid #d8ede3;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #fff;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.conglomerado:hover {
+  background: #e8f8f0;
+  transform: translateY(-2px);
+}
+
+.botones {
+  margin-top: 8px;
+  display: flex;
+  gap: 6px;
+}
+
+.botones button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn-guardar { background: var(--acento); }
+.btn-guardar:hover { background: #2ebd87; }
+
+.btn-eliminar { background: var(--rojo); }
+.btn-eliminar:hover { background: #c0392b; }
+
+#map {
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.acciones {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.acciones button {
+  background: var(--verde);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.acciones button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(31,122,91,0.3);
+}
+
+footer {
+  text-align: center;
+  background: #e8f5ec;
+  color: #2a3d34;
+  padding: 10px;
+  border-top: 1px solid #cde3d8;
+}

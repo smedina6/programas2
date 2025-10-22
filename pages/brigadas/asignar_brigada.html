@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoDatos - Asignar Brigada</title>
+  <link rel="stylesheet" href="../../css/asignar_conglomerado.css">
+  <script src="../../js/asignar_brigada.js" defer></script>
+</head>
+<body>
+  <main class="form-page">
+    <section class="card wide">
+      <header class="card__header">
+        <h1>Asignar Brigada a Conglomerado</h1>
+        <p class="subtitle">Gestiona la relación entre brigadas y conglomerados existentes.</p>
+      </header>
+
+      <form id="form-asignar" class="styled-form" autocomplete="off">
+        
+        <div class="field">
+          <label for="id_conglomerado">Seleccionar Conglomerado</label>
+          <select class="input" id="id_conglomerado" name="id_conglomerado" required>
+            <option value="">Cargando conglomerados...</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="brigada">Seleccionar Brigada</label>
+          <select class="input" id="brigada" name="brigada" required>
+            <option value="">Seleccione una brigada</option>
+
+          </select>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Asignar Brigada</button>
+          <button class="btn secondary" type="reset">Limpiar</button>
+        </div>
+      </form>
+
+      <footer class="card__footer">
+        <p class="note">
+          💡 Asegúrate de haber seleccionado un conglomerado válido antes de asignar una brigada.
+        </p>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
