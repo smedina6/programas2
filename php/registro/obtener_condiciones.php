@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php'; 
+include '../../php/conexion.php'; 
 header('Content-Type: application/json');
 
 $result = $conexion->query("SELECT id_condicion, nombre_condicion FROM condicion ORDER BY nombre_condicion");

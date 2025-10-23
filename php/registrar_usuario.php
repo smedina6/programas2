@@ -60,11 +60,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $stmt->bind_param(
-        "isssiiiiiissssssisssi",
-        $tipo_documento, $documento, $nombre, $apellido, $pais, $departamento, $ciudad,
-        $estado_civil, $condicion, $etnia, $correo, $telefono, $direccion, $clave,
-        $estudios, $fecha_ingreso, $estados, $comentarios, $fecha_registro, $roles
+    "isssiiiiiissssssissi",
+    $tipo_documento, $documento, $nombre, $apellido, $pais, $departamento, $ciudad,
+    $estado_civil, $condicion, $etnia, $correo, $telefono, $direccion, $clave,
+    $estudios, $fecha_ingreso, $estados, $comentarios, $fecha_registro, $roles
     );
+
 
     if ($stmt->execute()) {
         echo json_encode(['status' => 'ok', 'mensaje' => 'Usuario registrado correctamente']);

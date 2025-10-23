@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-include 'conexion.php';
+include '../../php/conexion.php';
 
 $result = $conexion->query("SELECT id_rol, nombre_rol FROM roles");
 

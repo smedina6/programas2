@@ -7,21 +7,22 @@ session_start();
                display: flex; justify-content: space-between; 
                align-items: center; z-index: 1000;">
     <div>
-        <button onclick="location.href='../../menu.php'" 
+        <!-- ✅ Cambiado a /vistas/menu.php -->
+        <button onclick="location.href='../../ecodatos/vistas/menu.php'" 
                 style="padding: 5px 10px; cursor:pointer; background-color:white; color:#4CAF50; border:none; border-radius:5px;">
-            🏠 Menú
+             Menú
         </button>
     </div>
     <div>
         <button onclick="cerrarSesion()" 
                 style="padding: 5px 10px; cursor:pointer; background-color:white; color:#4CAF50; border:none; border-radius:5px;">
-            🔒 Cerrar Sesión
+             Cerrar Sesión
         </button>
     </div>
 </header>
 
 <script>
 function cerrarSesion() {
-    window.location.href = 'index.php';
+    window.location.href = '../../ecodatos/index.php';
 }
 </script>

@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
-include __DIR__ . '/conexion.php';
+include '../../php/conexion.php'; 
 
 $accion = $_GET['accion'] ?? '';
 

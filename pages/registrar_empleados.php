@@ -1,5 +1,6 @@
 <?php
-include '../../php/conexion.php';
+include '../php/conexion.php';
+include '../php/cerrar/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -8,8 +9,17 @@ include '../../php/conexion.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro de Empleados</title>
   <script src="https://cdn.jsdelivr.net/npm/country-state-city@3.1.0/dist/index.min.js"></script>
-  <link rel="stylesheet" href="../../css/registrosesion.css">
-  <script src="../../js/registro_empleados.js" defer></script>
+  <link rel="stylesheet" href="../css/registrosesion.css">
+  <script>
+        function abrirPagina(url) {
+            window.location.href = url;
+        }
+    </script>
+    <style>
+        body {
+            margin-top: 60px; 
+        }
+    </style>
   
 </head>
 <body>
@@ -89,8 +99,11 @@ include '../../php/conexion.php';
 
         <fieldset>
           <legend>Credenciales</legend>
-          <label for="usuario">Usuario:</label>
-          <input type="text" id="usuario" name="usuario" required>
+          <label for="rol">Rol:</label>
+          <select id="rol" name="rol">
+            <option value="">Seleccione...</option>
+          </select>
+
 
           <label for="contrasena">Contraseña:</label>
           <input type="password" id="contrasena" name="contrasena" required>  
@@ -112,17 +125,15 @@ include '../../php/conexion.php';
             <option value="">Seleccione...</option>
           </select>
 
-          <label for="rol">Rol:</label>
-          <select id="rol" name="rol">
-            <option value="">Seleccione...</option>
-          </select>
-
+        
           <label for="comentarios">Comentarios:</label>
           <textarea id="comentarios" name="comentarios" rows="3"></textarea>
         </fieldset>
 
         <button class="btn" type="submit">Crear cuenta</button>
       </form>
+      
+    <script src="../js/registro_empleados.js" defer></script>
     </div>
   </main>
   </div>

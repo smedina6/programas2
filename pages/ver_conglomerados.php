@@ -1,12 +1,26 @@
+<?php
+include '../php/conexion.php';
+include '../php/cerrar/header.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>EcoDatos - Ver Conglomerados</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-  <link rel="stylesheet" href="../../css/ver_conglomerados.css">
+  <link rel="stylesheet" href="../css/ver_conglomerados.css">
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="../../js/mapa.js" defer></script>
+  <script src="../js/mapa.js" defer></script>
+    <script>
+        function abrirPagina(url) {
+            window.location.href = url;
+        }
+    </script>
+    <style>
+        body {
+            margin-top: 60px; 
+        }
+    </style>
 </head>
 <body>
 

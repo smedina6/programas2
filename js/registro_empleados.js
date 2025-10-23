@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  // ====== Cargar Tipos de Documento desde PHP ======
-  fetch('php/obtener_tipos_documento.php')
+  fetch('../php/registro/obtener_tipos_documento.php')
     .then(res => res.json())
     .then(data => {
       data.forEach(tipo => {
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error('Error cargando tipos de documento:', err));
 
-  fetch('php/obtener_datos_pais.php?accion=pais')
+  fetch('../php/registro/obtener_datos_pais.php?accion=pais')
     .then(res => res.json())
     .then(data => {
       data.forEach(pais => {
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!idPais) return;
 
-    fetch(`php/obtener_datos_pais.php?accion=departamento&id_pais=${idPais}`)
+    fetch(`../php/registro/obtener_datos_pais.php?accion=departamento&id_pais=${idPais}`)
       .then(res => res.json())
       .then(data => {
         data.forEach(d => {
@@ -67,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!idDepartamento) return;
 
-    fetch(`php/obtener_datos_pais.php?accion=ciudad&id_departamento=${idDepartamento}`)
+    fetch(`../php/registro/obtener_datos_pais.php?accion=ciudad&id_departamento=${idDepartamento}`)
       .then(res => res.json())
       .then(data => {
         data.forEach(c => {
@@ -81,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ====== Cargar Estado Civil desde PHP ======
-  fetch('php/obtener_estados_civiles.php')
+  fetch('../php/registro/obtener_estados_civiles.php')
     .then(res => res.json())
     .then(data => {
       console.log("Etnias recibidas:", data); 
@@ -95,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(err => console.error('Error cargando estados civiles:', err));
 
   // ====== Cargar Condiciones desde PHP ======
-  fetch('php/obtener_condiciones.php')
+  fetch('../php/registro/obtener_condiciones.php')
     .then(res => res.json())
     .then(data => {
       data.forEach(c => {
@@ -108,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(err => console.error('Error cargando condiciones:', err));
 
   // ====== Cargar Etnias desde PHP ======
-  fetch('php/obtener_etnias.php')
+  fetch('../php/registro/obtener_etnias.php')
     .then(res => res.json())
     .then(data => {
       data.forEach(c => {
@@ -120,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error('Error cargando etnias:', err));
 
-  fetch('php/obtener_estados.php')
+  fetch('../php/registro/obtener_estados.php')
     .then(res => res.json())
     .then(data => {
        data.forEach(c => {
@@ -132,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error('Error cargando estado:', err));
 
-  fetch('php/obtener_rol.php')
+  fetch('../php/registro/obtener_rol.php')
   .then(res => res.json())
   .then(data => {
     const rolSelect = document.getElementById('rol');
@@ -150,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const datos = new FormData(form);
 
-    fetch('php/registrar_usuario.php', {
+    fetch('../php/registrar_usuario.php', {
   method: 'POST',
   body: datos
 })

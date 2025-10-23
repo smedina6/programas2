@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';  // Archivo con tu conexión a la base de datos
+include '../../php/conexion.php';  // Archivo con tu conexión a la base de datos
 header('Content-Type: application/json');
 
 $result = $conexion->query("SELECT id_etnia, nombre_etnia FROM etnia ORDER BY nombre_etnia");

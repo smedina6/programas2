@@ -1,19 +1,42 @@
-<?php
-include('conexion.php');
+<?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-$data = json_decode(file_get_contents("php://input"), true);
+header('Content-Type: application/json; charset=utf-8');
+include 'conexion.php'; // aquí tienes la variable $conexion (MySQLi)
 
-if ($data) {
-  $nombre = $conn->real_escape_string($data['nombre']);
-  $ubicacion = $conn->real_escape_string($data['ubicacion']);
+$nombre = $_POST['nombre'] ?? '';
+$lat    = $_POST['lat'] ?? '';
+$lon    = $_POST['lon'] ?? '';
 
-  $sql = "INSERT INTO conglomerado (nombre, ubicacion) VALUES ('$nombre', '$ubicacion')";
-  if ($conn->query($sql) === TRUE) {
-    echo json_encode(["status" => "ok", "mensaje" => "Conglomerado registrado"]);
-  } else {
-    echo json_encode(["status" => "error", "mensaje" => $conn->error]);
-  }
+if (empty($nombre) || empty($lat) || empty($lon)) {
+    echo json_encode(["success" => false, "message" => "Faltan datos obligatorios."]);
+    exit;
 }
 
-$conn->close();
+try {
+    // ✅ Preparar la consulta con MySQLi
+    $stmt = $conexion->prepare("INSERT INTO conglomerado_aprobados (nombre, latitud, longitud) VALUES (?, ?, ?)");
+    $stmt->bind_param("sdd", $nombre, $lat, $lon);
+
+    if ($stmt->execute()) {
+        echo json_encode([
+            "success" => true,
+            "message" => "✅ Conglomerado guardado correctamente.",
+            "id_insertado" => $conexion->insert_id
+        ]);
+    } else {
+        echo json_encode([
+            "success" => false,
+            "message" => "❌ Error al ejecutar la consulta: " . $stmt->error
+        ]);
+    }
+
+    $stmt->close();
+    $conexion->close();
+} catch (Exception $e) {
+    echo json_encode(["success" => false, "message" => "Error al guardar: " . $e->getMessage()]);
+}
 ?>
+

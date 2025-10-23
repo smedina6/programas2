@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-include 'conexion.php'; // tu archivo de conexión
+include '../../php/conexion.php'; 
 
 $query = "SELECT id_estado, nombre_estado, emoji_estado FROM estados ORDER BY id_estado";
 $result = $conexion->query($query);
